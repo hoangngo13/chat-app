@@ -4,6 +4,7 @@
 // that code so it'll be compiled.
 
 require("@rails/ujs").start()
+require("semantic-ui-sass")
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
@@ -15,3 +16,9 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+import JQuery from 'jquery';
+window.$ = window.jQuery = JQuery;
+
+$(document).on('turbolinks:load', function () {
+    $('.ui.dropdown').dropdown();
+})
