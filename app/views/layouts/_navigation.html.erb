@@ -2,18 +2,18 @@
   Chatroom
 </a>
 <a class="item">
-  essages
+  Messages
 </a>
 <div class="right menu">
   <div class="ui dropdown item">
     Account <i class="dropdown icon"></i>
     <div class="menu">
-     <a class="item">Log out</a>
-     <a class="item">Log in</a>
-     <a class="item">Signup</a>
-   </div>
-   </div>
+     <%= link_to 'Log out', destroy_user_session_path, method: :delete, class: "item"%>
+     <%= link_to 'Log in', new_user_session_path, class: "item"%>    
+    </div>
+  </div>
    <div class="item">
-     <div class="ui primary button">Sign Up</div>
+     <%= link_to 'Sign Up', new_user_registration_path, class:"ui primary button"%>
    </div>
+  </div>
 </div>
