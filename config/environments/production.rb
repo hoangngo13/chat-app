@@ -38,5 +38,8 @@ Rails.application.configure do
     logger.formatter = config.log_formatter
     config.logger = ActiveSupport::TaggedLogging.new(logger)
   end
+  
+  config.web_socket_server_url = "wss://action-cable-example.herokuapp.com/cable" 
+  config.action_cable.allowed_request_origins = ['https://hoangngo-chatapp.herokuapp.com', 'http://hoangngo-chatapp.herokuapp.com']
 
 end
